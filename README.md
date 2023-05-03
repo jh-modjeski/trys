@@ -52,30 +52,30 @@ Yeah, but it sounds like Triss Merigold - so that's what we're going with. Let's
 
 To transcribe a single file:
 
-```python main.py audio_file.ogg```
+```python main.py podcast.wav```
 
 
 To transcribe multiple files:
 
-```python main.py audio_file_1.ogg audio_file_2.ogg```
+```python main.py "Lex Fridman.wav" "Andrej Karpathy.wav"```
 
 To transcribe files in a folder
 
-```python main.py /audio```
+```python main.py /podcast```
 
 To transcribe zipped files:
 
-```python main.py collection.zip```
+```python main.py podcast_recordings.zip```
 
 
 To transcribe a Discord audio file with username extraction:
 
-```python main.py audio_file1.ogg audio_file2.ogg --discord```
+```python main.py 1-lexf-3812.ogg 2-andrewK-8442.ogg --discord```
 
 
 To enable experimental mode with word-level timestamps:
 
-```python main.py audio_file.ogg --experimental```
+```python main.py podcast.wav --experimental```
 
 
 ## Dependencies
