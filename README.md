@@ -52,16 +52,20 @@ Yeah, but it sounds like Triss Merigold - so that's what we're going with.
 
 To transcribe a single file:
 
-```python main.py /input/audio_file.ogg```
+```python main.py audio_file.ogg```
 
 
 To transcribe multiple files:
 
-```python main.py /input/audio_file_1.ogg /input/audio_file_2.ogg```
+```python main.py audio_file_1.ogg audio_file_2.ogg```
+
+To transcribe files in a folder
+
+```python main.py /audio```
 
 To transcribe zipped files:
 
-```python main.py /input/collection.zip```
+```python main.py collection.zip```
 
 
 To transcribe a Discord audio file with username extraction:
