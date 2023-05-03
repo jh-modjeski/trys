@@ -80,7 +80,7 @@ To enable experimental mode with word-level timestamps:
 
 ## Dependencies
 
-Trys requires the following libraries:
+Trys was developed with Python3.10 and requires the following libraries:
 
 - docopt
 - halo
