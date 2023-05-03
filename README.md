@@ -4,7 +4,7 @@ Trys is a powerful audio transcription tool for podcast-style recordings, transc
 
 ## That's a weird name
 
-Yeah, but it sounds like Triss Merigold - so that's what we're going with.
+Yeah, but it sounds like Triss Merigold - so that's what we're going with. Let's not think too hard about it, or you might notice that there's no Y in transcript either.
 
 ## Features
 
