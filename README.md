@@ -8,7 +8,7 @@ Yeah, but it sounds like Triss Merigold - so that's what we're going with. Let's
 
 ## Features
 
-- Supports single or multiple input files in standard audio formats
+- Supports single or multiple input files in standard audio formats (wav, mp3, flac, ogg)
 - Automatically detects and extracts usernames from Discord audio file names
 - Experimental mode for precise word-level timestamps
 - Adjustable silence detection and minimum silence length
@@ -70,12 +70,12 @@ To transcribe zipped files:
 
 To transcribe a Discord audio file with username extraction:
 
-```python main.py /input/audio_file1.ogg /input/audio_file2.ogg --discord```
+```python main.py audio_file1.ogg audio_file2.ogg --discord```
 
 
 To enable experimental mode with word-level timestamps:
 
-```python main.py /input/audio_file.ogg --experimental```
+```python main.py audio_file.ogg --experimental```
 
 
 ## Dependencies
