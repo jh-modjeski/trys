@@ -59,6 +59,10 @@ To transcribe multiple files:
 
 ```python main.py /input/audio_file_1.ogg /input/audio_file_2.ogg```
 
+To transcribe zipped files:
+
+```python main.py /input/collection.zip```
+
 
 To transcribe a Discord audio file with username extraction:
 
