@@ -6,6 +6,9 @@ import zipfile
 
 from halo import halo
 from pydub import AudioSegment
+from tqdm import tqdm
+
+from Trys.utils import format_timestamp
 
 
 def create_tmp_dir():
@@ -71,3 +74,10 @@ def load_audio(root, file_name):
 
 def walk_src_files(temp_dir):
     return os.walk(f"{temp_dir}/src")
+
+
+def export_transcript(all_transcribed_clips, output_path):
+    with open(output_path, "w", encoding="utf-8") as f:
+        for (start, end), speaker, text in tqdm(all_transcribed_clips, desc=f"Saving final transcript to "
+                                                                            f"{output_path}", unit="scripts"):
+            f.write(f"{format_timestamp(start)} - {format_timestamp(end)} ({speaker}): {text}\n")
