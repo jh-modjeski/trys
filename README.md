@@ -66,7 +66,7 @@ Here is the same podcast in embeded mode.
         basic        Basic mode (default behavior)
         experimental Use experimental features (word_timestamps)
         tag          Tag interjections and crosstalk
-        embed        Use experimental features and tag interjections and crosstalk (combined mode)
+        embed        Use experimental features to embed interjections and tag crosstalk (combined mode)
 
     Options:
         -o --output=OUTPUT              Output file path [default: transcript.txt]
