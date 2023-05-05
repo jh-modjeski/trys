@@ -76,8 +76,17 @@ def walk_src_files(temp_dir):
     return os.walk(f"{temp_dir}/src")
 
 
-def export_transcript(all_transcribed_clips, output_path):
+def export_transcript(all_transcribed_clips, output_path, mode):
     with open(output_path, "w", encoding="utf-8") as f:
-        for (start, end), speaker, text in tqdm(all_transcribed_clips, desc=f"Saving final transcript to "
-                                                                            f"{output_path}", unit="scripts"):
-            f.write(f"{format_timestamp(start)} - {format_timestamp(end)} ({speaker}): {text}\n")
+        for (start, end), speaker, text, _, interjection, crosstalk, _ in tqdm(all_transcribed_clips, desc=f"Saving final transcript to {output_path}", unit="scripts"):
+            if mode != 'embed' or not interjection:
+                f.write(f"{format_timestamp(start)} - {format_timestamp(end)} ({speaker}){insert_tag(interjection, crosstalk, mode)}: {text}\n")
+
+
+def insert_tag(interjection, crosstalk, mode):
+    if interjection and mode == 'tag':
+        return " [interjection]"
+    elif crosstalk and (mode == 'tag' or mode == 'embed'):
+        return " [crosstalk]"
+    else:
+        return ""
