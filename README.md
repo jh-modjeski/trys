@@ -11,7 +11,7 @@ Yeah, but it sounds like Triss Merigold - so that's what we're going with. Let's
 - Supports single or multiple input files in standard audio formats (wav, mp3, flac, ogg)
 - Automatically detects and extracts usernames from Discord audio file names
 - Experimental mode for precise word-level timestamps and embedded interjections.
-- Adjustable silence detection and minimum silence length
+- Adjustable silence detection and pause length
 - Customizable transcription models (tiny, base, small, medium, large)
 
 ## Example Output ([Lex Fridman podcast with Andrej Karpathy](https://www.youtube.com/watch?v=oHWuv1Aqrzk))
