@@ -35,18 +35,26 @@ Yeah, but it sounds like Triss Merigold - so that's what we're going with. Let's
 00:03:33.134 - 00:03:37.916 (Andrej Karpathy):  much less maybe just by talking to your phone. I mean, I know it sounds kind of crazy.
 ```
 
-## Usage (Sorry, usage is out of date. Will be updated shortly.)
+## Usage
 
-```main.py <input>... [--output=OUTPUT] [--discord] [--experimental] [--transcription_model=TM] [--min_silence_len=MSL] [--silence_thresh=ST]```
+```
+    Usage:
+        main.py [basic | experimental | tag | embed] <input>... [--output=OUTPUT] [--discord_usernames] [--transcription_model=TM] [--pause_len=PL] [--db_silence_thresh=DST] [--language=LANG]
 
-### Options
+    Commands:
+        basic        Basic mode (default behavior)
+        experimental Use experimental features (word_timestamps)
+        tag          Tag interjections and crosstalk
+        embed        Use experimental features and tag interjections and crosstalk (combined mode)
 
-- `-o --output`: Output file path `[default: transcript.txt]`
-- `-d --discord`: Extract Discord username from file names (use this with [CraigChat](https://github.com/CraigChat/craig) or similar tools)
-- `-e --experimental`: Experimental mode that uses the start and end time of each word
-- `-m --transcription_model`: Transcription model to use (available: tiny, base, small, medium, large) `[default: large]`
-- `-l --min_silence_len`: Minimum silence length in milliseconds `[default: 1500]`
-- `-t --silence_thresh`: Silence threshold in dB `[default: -50]`
+    Options:
+        -o --output=OUTPUT              Output file path [default: transcript.txt]
+        -u --discord_usernames          Extract discord username from file names
+        -m --transcription_model=TM     Transcription model to use (available: tiny, base, small, medium, large) [default: large]
+        -p --pause_len=PL               Minimum silence length in milliseconds before making a new clip [default: 1500]
+        -d --db_silence_thresh=DST      Silence threshold in dB [default: -50]
+        -l --language=LANG              Language to use for transcription [default: English]
+```
 
 ## Examples
 
@@ -70,12 +78,20 @@ To transcribe zipped files:
 
 To transcribe a Discord audio file with username extraction:
 
-```python main.py 1-lexf-3812.ogg 2-andrewK-8442.ogg --discord```
+```python main.py 1-lexf-3812.ogg 2-andrewK-8442.ogg --discord_usernames```
 
 
 To enable experimental mode with word-level timestamps:
 
-```python main.py podcast.wav --experimental```
+```python main.py experimental /podcast```
+
+To enable tag mode with interjection and crosstalk tagging:
+
+```python main.py tag /podcast```
+
+To enable embed mode with experimental embedded interjections and crosstalk tagging features:
+
+```python main.py embed /podcast```
 
 
 ## Dependencies
