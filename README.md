@@ -1,6 +1,6 @@
 # Trys -TRanscrYpt Stitcher
 
-Trys is a powerful audio transcription tool for podcast-style recordings, transcribing multiple audio files and stitching them together into a single transcript. I recommend using [CraigChat](https://github.com/CraigChat/craig) for great recordings on Discord. Trys uses Whisper by OpenAI for automatic speech recognition and provides options for different transcription models, silence detection, and more.
+Trys is a powerful audio transcription tool for podcast-style recordings, transcribing multiple audio files and stitching them together into a single transcript. Each line in the transcript represents a continuous audible section when the speaker was never quiet for longer than a configurable pause_len. I recommend using [CraigChat](https://github.com/CraigChat/craig) for great recordings on Discord. Trys uses Whisper by OpenAI for automatic speech recognition and provides options for different transcription models, silence detection, and more.
 
 ## That's a weird name
 
