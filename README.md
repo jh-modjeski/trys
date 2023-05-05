@@ -35,7 +35,7 @@ Yeah, but it sounds like Triss Merigold - so that's what we're going with. Let's
 00:03:33.134 - 00:03:37.916 (Andrej Karpathy):  much less maybe just by talking to your phone. I mean, I know it sounds kind of crazy.
 ```
 
-## Usage
+## Usage (Sorry, usage is out of date. Will be updated shortly.)
 
 ```main.py <input>... [--output=OUTPUT] [--discord] [--experimental] [--transcription_model=TM] [--min_silence_len=MSL] [--silence_thresh=ST]```
 
